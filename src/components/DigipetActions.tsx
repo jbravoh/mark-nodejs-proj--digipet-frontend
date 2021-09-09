@@ -22,7 +22,15 @@ function DigipetActions({ actions }: Props) {
     <>
       {actions.map(({ name, handler = defaultHandler }) => (
         // using destructuring with a default value
-        <button key={name} onClick={handler}>
+        <button
+          key={name}
+          onClick={handler}
+          className={
+            name === "Rehome" || name === "Hatch"
+              ? "rehome-hatch action-button"
+              : "action-button"
+          }
+        >
           {name}
         </button>
       ))}
