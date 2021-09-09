@@ -18,16 +18,16 @@ body {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   background-color: white;
 
-  max-width: 600px;
+  max-width: 800px;
   margin: 20px auto;
   padding: 20px;
 }
 
 .title {
-  margin: 5px;
+  margin: 10px;
   /* font-family: 'Chicle'; */
   letter-spacing: 1px;
-  font-size: 40px;
+  font-size: 60px;
   color: #df2e2e;
 }
 
@@ -39,20 +39,17 @@ body {
 .message {
   font-weight: bold;
   text-align: center;
-  margin: 20px 0 5px;
+  margin: 20px 0 0;
+  font-size: 20px;
 }
 
-/* .actions {
-    padding: 5px;
-
-} */
 
 /* ====> DigipetActions <==== */
 
 .action-button {
   padding: 5px;
   margin: 0 5px;
-  width: 70px;
+  width: 110px;
   border-radius: 8px;
   background-color: #297f87;
   color: white;
@@ -61,6 +58,7 @@ body {
   font-weight: bold;
   font-family: "Quicksand";
   transition: 0.2s;
+  font-size: 20px;
 }
 
 .action-button:hover {
@@ -78,11 +76,19 @@ body {
   color: #df2e2e;
 }
 
+
+/* ====> DigipetData <==== */
+
 .digipet-data-container {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   padding: 20px 25px 10px;
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin: 20px 0;
+  width: 200px;
+}
+
+.stat-title {
+  text-align: center;
 }
 
 .stat-list {
@@ -93,15 +99,18 @@ body {
 
 .stat-list-item {
   padding-top: 5px;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 500;
 }
 
 .value {
   color: #df2e2e;
   float: right;
+  font-weight: bold;
 }
 
-.rehome-value {
-  background-color: #df2e2e;
+.no-pet {
+  font-size: 20px;
+  margin: 107.5px 0;
 }
+

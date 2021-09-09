@@ -21,7 +21,7 @@ function DigipetData({ digipet }: Props) {
       </div>
     );
   } else {
-    return <p>No digipet to see 😢</p>;
+    return <p className="no-pet">No digipet to see 😢</p>;
   }
 }
 
