@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Chicle&family=Quicksand:wght@400;500;600;700&display=swap");
+
+body {
+  background-color: #fff7ae;
+  font-family: "Quicksand";
+}
+
+/* ====> App <==== */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  /* align-self: center; */
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid white; */
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  background-color: white;
+
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.title {
+  margin: 5px;
+  /* font-family: 'Chicle'; */
+  letter-spacing: 1px;
+  font-size: 40px;
+  color: #df2e2e;
+}
+
+.stat-title {
+  margin: 0;
+  color: #297f87;
+}
+
+.message {
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0 5px;
+}
+
+/* .actions {
+    padding: 5px;
+
+} */
+
+/* ====> DigipetActions <==== */
+
+.action-button {
+  padding: 5px;
+  margin: 0 5px;
+  width: 70px;
+  border-radius: 8px;
+  background-color: #297f87;
+  color: white;
+  border: 1.5px solid #297f87;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  font-weight: bold;
+  font-family: "Quicksand";
+  transition: 0.2s;
+}
+
+.action-button:hover {
+  cursor: pointer;
+  color: #297f87;
+  background-color: white;
+}
+
+.rehome-hatch {
+  background-color: #df2e2e;
+  border: 1.5px solid #df2e2e;
+}
+
+.rehome-hatch:hover {
+  color: #df2e2e;
+}
+
+.digipet-data-container {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  padding: 20px 25px 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.stat-list {
+  list-style-type: none;
+  padding: 0;
+  /* text-align: center; */
+}
+
+.stat-list-item {
+  padding-top: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.value {
+  color: #df2e2e;
+  float: right;
+}
+
+.rehome-value {
+  background-color: #df2e2e;
+}

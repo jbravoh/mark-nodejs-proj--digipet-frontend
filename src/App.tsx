@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import DigipetActions from "./components/DigipetActions";
 import DigipetData from "./components/DigipetData";
+import "./App.css";
 
 export interface Digipet {
   happiness: number;
@@ -19,7 +20,7 @@ function App() {
     try {
       const res = await fetch(`http://localhost:4000${endpoint}`);
       const body = await res.json();
-      setMessage(body.message);
+      setMessage(body.description);
       setDigipetStats(body.digipet);
     } catch (err) {
       console.log(err);
@@ -39,25 +40,44 @@ function App() {
 
   return (
     <main>
-      <h1>Digipet</h1>
-      {isFirstLoad && <p>Loading...</p>}
-      {message && <p>{message}</p>}
-      <hr />
-      <DigipetData digipet={digipetStats} />
-      <hr />
-      <DigipetActions
-        actions={[
-          {
-            name: "Hatch",
-            handler: () => loadDataFromEndpoint("/digipet/hatch"),
-          },
-          {
-            name: "Walk",
-            handler: () => loadDataFromEndpoint("/digipet/walk"),
-          },
-          { name: "Feed" },
-        ]}
-      />
+      <div className="main-container">
+        <h1 className="title">Digipet 🐾</h1>
+        {isFirstLoad && <p>Loading...</p>}
+        {message && <p className="message">{message}</p>}
+        <hr />
+        <DigipetData digipet={digipetStats} />
+        <hr />
+        <div className="actions">
+          <DigipetActions
+            actions={[
+              {
+                name: "Hatch",
+                handler: () => loadDataFromEndpoint("/digipet/hatch"),
+              },
+              {
+                name: "Walk",
+                handler: () => loadDataFromEndpoint("/digipet/walk"),
+              },
+              {
+                name: "Feed",
+                handler: () => loadDataFromEndpoint("/digipet/feed"),
+              },
+              {
+                name: "Train",
+                handler: () => loadDataFromEndpoint("/digipet/train"),
+              },
+              {
+                name: "Ignore",
+                handler: () => loadDataFromEndpoint("/digipet/Ignore"),
+              },
+              {
+                name: "Rehome",
+                handler: () => loadDataFromEndpoint("/digipet/rehome"),
+              },
+            ]}
+          />
+        </div>
+      </div>
     </main>
   );
 }
